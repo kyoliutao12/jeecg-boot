@@ -29,7 +29,7 @@ Jeecg-Boot 快速开发平台
 
 - 依赖管理：Maven...
 
-- 数据库：MySQL5.0  &  Oracle 11g
+- 数据库：MySQL5.0  &  Oracle 11g...
 
 - 缓存：Redis
 
