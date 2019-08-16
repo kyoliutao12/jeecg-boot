@@ -27,7 +27,7 @@ Jeecg-Boot 快速开发平台
 
 - IDE(JAVA)： Eclipse安装lombok插件 或者 IDEA
 
-- 依赖管理：Maven
+- 依赖管理：Maven...
 
 - 数据库：MySQL5.0  &  Oracle 11g
 
