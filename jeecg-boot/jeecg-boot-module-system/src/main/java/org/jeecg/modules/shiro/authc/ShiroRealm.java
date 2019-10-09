@@ -50,9 +50,9 @@ public class ShiroRealm extends AuthorizingRealm {
 	}
 
 	/**
-	 * 功能： 获取用户权限信息，包括角色以及权限。只有当触发检测用户权限时才会调用此方法，例如checkRole,checkPermission
+	 * 功能： 获取用户权限信息，包括角色以及权限。只有当触发检测用户权限时才会调用此方法，例如 checkRole,checkPermission
 	 * 
-	 * @param token token
+	 * @param principals
 	 * @return AuthorizationInfo 权限信息
 	 */
 	@Override
@@ -79,15 +79,16 @@ public class ShiroRealm extends AuthorizingRealm {
 	/**
 	 * 功能： 用来进行身份认证，也就是说验证用户输入的账号和密码是否正确，获取身份验证信息，错误抛出异常
 	 * 
-	 * @param authenticationToken 用户身份信息 token
+	 * @param auth 用户身份信息 token
 	 * @return 返回封装了用户信息的 AuthenticationInfo 实例
 	 */
 	@Override
 	protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken auth) throws AuthenticationException {
-		log.debug("————身份认证————");
+		log.info("————身份认证————");
+
 		String token = (String) auth.getCredentials();
 		if (token == null) {
-			throw new AuthenticationException("token为空!");
+			throw new AuthenticationException("token为空!!##");
 		}
 		// 校验token有效性
 		LoginUser loginUser = this.checkUserTokenIsEffect(token);
